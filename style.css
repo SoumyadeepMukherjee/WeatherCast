@@ -1,0 +1,426 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    color: white;
+}
+
+body 
+{
+    font-size: 120%;
+    font-family: 'Lato', sans-serif;
+    background-image: url('http://source.unsplash.com/1600x900/?landscape');
+}
+
+.container
+{
+    background-color: rgba(0,0,0,0.6);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    padding-top: 10%;
+}
+
+.container-model
+{
+    display: flex;
+    justify-content: center;
+}
+
+.header {
+    color: rgb(255, 255, 255);
+    font-size: 300%;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin-bottom: 0.5%;
+}
+
+.subheader 
+{
+    color: white;
+    font-size: 100%;
+    text-align: center;
+    margin-bottom: 1%;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.card {
+    background-color: #000000d0;
+    color: white;
+    padding: 2em;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 420px;
+}
+
+.description {
+    text-transform: capitalize;
+    margin-left: 8px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+button {
+    margin: 0.5em;
+    border-radius: 50%;
+    border: none;
+    height: 44px;
+    width: 44px;
+    outline: none;
+    background: #7c7c7c2b;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+input.search-bar {
+    border: none;
+    outline: none;
+    padding: 0.4em 1em;
+    border-radius: 24px;
+    background: #7c7c7c2b;
+    color: white;
+    font-family: inherit;
+    font-size: 120%;
+    width: calc(100% - 100px);
+}
+
+button:hover {
+    background: #d4d1d16b
+}
+
+.city {
+    text-align: center;
+}
+
+.h1.temp {
+    margin: 0;
+    margin-bottom: 0.4em;
+}
+
+.weather.loading {
+    visibility: hidden;
+    max-height: 20px;
+    position: relative;
+}
+
+.weather.loading:after {
+    visibility: visible;
+    content: "Enter a city to know about its geolocation info!";
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 20px;
+}
+
+@media(max-width:912px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background: #223;
+        font-family: 'Lato', sans-serif;
+        background-image: url(http://source.unsplash.com/1600x900/?landscape);
+        font-size: 120%;
+    }
+    .header {
+        color: white;
+        font-size: 300%;
+        display: block;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .subheader {
+        text-align: center;
+        color: white;
+        font-size: 100%;
+        padding-left: 12px;
+    }
+    .card {
+        background-color: #000000d0;
+        color: white;
+        padding: 2.6em;
+        border-radius: 30px;
+        width: 100%;
+        max-width: 420px;
+        margin: 2em;
+    }
+    .search {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 15px;
+    }
+    .weather.loading {
+        visibility: hidden;
+        max-height: 20px;
+        position: relative;
+    }
+}
+
+@media(max-width:540px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 110vh;
+        margin: 0;
+        background: #223;
+        font-family: 'Lato', sans-serif;
+        background-image: url(http://source.unsplash.com/1600x900/?landscape);
+        font-size: 130%;
+    }
+    .header {
+        color: white;
+        font-size: 280%;
+        display: block;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .subheader {
+        text-align: center;
+        color: white;
+        font-size: 94%;
+        padding-left: 6px;
+    }
+    .card {
+        background-color: #000000d0;
+        color: white;
+        padding: 1em;
+        border-radius: 30px;
+        width: 115%;
+        max-width: 420px;
+        margin: 2em;
+    }
+    .weather.loading {
+        visibility: hidden;
+        max-height: 50px;
+        position: relative;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width:395px) and (max-width:415px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 105vh;
+        margin: 0;
+        background: #223;
+        font-family: 'Lato', sans-serif;
+        background-image: url(http://source.unsplash.com/1600x900/?landscape);
+        font-size: 90%;
+    }
+    .header {
+        color: white;
+        font-size: 280%;
+        display: block;
+        text-align: center;
+        padding-left: 1%;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .subheader {
+        text-align: center;
+        color: white;
+        font-size: 110%;
+        padding-left: 5px;
+    }
+    .card {
+        background-color: #000000d0;
+        color: white;
+        padding: 1em;
+        border-radius: 30px;
+        width: 80%;
+        max-width: 420px;
+        margin: 2em;
+    }
+    .search {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 12px;
+    }
+    input.search-bar {
+        border: none;
+        outline: none;
+        padding: 0.4em 1em;
+        border-radius: 20px;
+        background: #7c7c7c2b;
+        color: white;
+        font-family: inherit;
+        font-size: 120%;
+        width: calc(100% - 100px);
+    }
+    button {
+        margin: 0.5em;
+        border-radius: 50%;
+        border: none;
+        height: 36px;
+        width: 36px;
+        outline: none;
+        background: #7c7c7c2b;
+        color: white;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+    }
+    .weather.loading {
+        visibility: hidden;
+        max-height: 38px;
+        position: relative;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width:281px) and (max-width:394px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background: #223;
+        font-family: 'Lato', sans-serif;
+        background-image: url(http://source.unsplash.com/1600x900/?landscape);
+        font-size: 70%;
+    }
+    .header {
+        color: white;
+        font-size: 270%;
+        display: block;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        padding-left: 2%;
+    }
+    .subheader {
+        text-align: center;
+        color: white;
+        font-size: 125%;
+        padding-left: 50px;
+        margin-right: 43px;
+    }
+    .card {
+        background-color: #000000d0;
+        color: white;
+        padding: 1.4em;
+        border-radius: 30px;
+        width: 70%;
+        max-width: 400px;
+        margin: 3.4em;
+        padding-bottom: 10px;
+        padding-left: 12px;
+        padding-top: 10px;
+    }
+    .search {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 10px;
+    }
+    input.search-bar {
+        border: none;
+        outline: none;
+        padding: 0.5em 1em;
+        border-radius: 20px;
+        background: #7c7c7c2b;
+        color: white;
+        font-family: inherit;
+        font-size: 125%;
+        width: calc(100% - 100px);
+    }
+    button {
+        margin: 0.5em;
+        border-radius: 50%;
+        border: none;
+        height: 33px;
+        width: 33px;
+        outline: none;
+        background: #7c7c7c2b;
+        color: white;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+    }
+}
+
+@media(max-width:280px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 106vh;
+        margin: 0;
+        background: #223;
+        font-family: 'Lato', sans-serif;
+        background-image: url(http://source.unsplash.com/1600x900/?landscape);
+        font-size: 70%;
+    }
+    .header {
+        color: white;
+        font-size: 265%;
+        display: block;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        padding-left: 2%;
+    }
+    .subheader {
+        text-align: center;
+        color: white;
+        font-size: 105%;
+        padding-left: 5px;
+        margin: 11px;
+    }
+    .card {
+        background-color: #000000d0;
+        color: white;
+        padding: 1em;
+        border-radius: 30px;
+        width: 64%;
+        max-width: 420px;
+        margin: 3em;
+        padding-bottom: 22px;
+        padding-left: 22px;
+        padding-top: 17px;
+        padding-right: 18px;
+    }
+    .search {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 8px;
+    }
+    input.search-bar {
+        border: none;
+        outline: none;
+        padding: 0.7em 2em;
+        border-radius: 20px;
+        background: #7c7c7c2b;
+        color: white;
+        font-family: inherit;
+        font-size: 118%;
+        width: calc(100% - 100px);
+    }
+    button {
+        margin: 0.5em;
+        border-radius: 50%;
+        border: none;
+        height: 32px;
+        width: 32px;
+        outline: none;
+        background: #7c7c7c2b;
+        color: white;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+    }
+}
